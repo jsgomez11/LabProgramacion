@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package LabProgra2;
+import java.util.Scanner;
+/**
+ *
+ * @author jsgom
+ */
+public class semana6 {
+    public static void main(String[] args) {
+        String word = "";
+        Scanner read = new Scanner(System.in);
+        int counter = 0;
+        char letter;
+        
+        System.out.println("Escriba una palabra: ");
+        word = read.next();
+        
+        System.out.println("Escriba una letra: ");
+        letter = read.next().charAt(0);
+        
+        counter = getQuantityOfLettersInAWorld(word,letter);
+   
+        System.out.println("La letra: "+letter+" Se repite: " +counter+ " veces");
+    }
+    
+    public static int getQuantityOfLettersInAWorld(String word, char letter)
+    {
+        int counter = 0;
+          for (int i = 0; i < word.length(); i++) 
+        {
+            if(word.charAt(i) == letter)
+            {
+                counter++;
+            }
+        }
+          return counter;
+    }
+}
